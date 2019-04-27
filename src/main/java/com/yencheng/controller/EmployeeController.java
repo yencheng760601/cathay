@@ -39,9 +39,7 @@ public class EmployeeController {
 			@RequestParam(required=false,defaultValue = "0") Integer age,
 			@RequestParam(required=false,defaultValue ="") String deptName) {
 		System.out.println("get parameter employeeId = " + name + "," + id + "," + age + "," + deptName);
-		System.out.println("name isNull : " + name.equals(""));
-		System.out.println("id isNull : " + id);
-		
+
 		return employeeService.findByEach(name,id,age,deptName);
 	}
 	//post-新增employee
